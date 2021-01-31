@@ -1,0 +1,57 @@
+<!-- {% extends 'base.html' %} -->
+{% block title %} Recipes searcher {% endblock %}
+{% block body %}
+<style> 
+    
+      body{
+        background-color: #d0d0ff;
+      /* background-image: url("https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/best-fridges-2019-1569421093.png?crop=0.730xw:0.599xh;0.134xw,0.0989xh&resize=980:*"); */
+        /* Full height */
+      /* height: 100%; 
+
+      /* Center and scale the image nicely */
+      /* background-position: scale;
+      background-repeat: no-repeat;
+      background-size: cover; */
+    }
+</style>
+<center>
+  <h2 style="padding-top: 3%;">
+      It's time to Cook! What's in your fridge? <br>
+      <small class="text-muted"> Let's make some food! </small>
+  </h2>
+  <br><br>
+  <!-- THIS IS THE SEARCH BAR
+  <form action="/recipes">
+      <div class="input-group mb-3" style="max-width: 50%;">
+          <input type="text" class="form-control" placeholder="Apple, flour, sugar" aria-label="Ingridients" aria-describedby="button-addon2" name="ingridients">
+          <div class="input-group-append"> 
+                <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Search</button> -->
+       
+      </div>
+  </form>
+</center>
+
+
+<center><table class="centered thick-border">
+    <a id='back-btn' href='index.html' class='btn btn-info'>Back</a>
+    {% for i, summary in results%}
+    <ul>
+            <tr>
+                    <td><button onclick="getMore('{{i}}', {{loop.index}} );">{{i}}</button>.</td><td>{{ summary | safe }}</td>
+            </tr>
+    </ul>
+    {% endfor %}
+</table></center>
+<script>
+function getMore(recipe,index, ingredients, instructions){
+  console.log(recipe, index, ingredients, "hi")
+  fetch('https://hackatuci.alvinly.repl.co/recipe?data=' + recipe).then(res => res.text()).then(res => {
+    // JAVASCRIPT CODE THAT MAKES OUR STUFF DISPLAY (IDK HOW
+    document.getElementById('display').innerHTML = `<img src="{{json_file[0]['image']}}" />`;});
+}
+</script>
+<div id="display" >Click button to display image!</div> 
+{{ingredients|safe}}
+{{instructions|safe}}
+{% endblock %}

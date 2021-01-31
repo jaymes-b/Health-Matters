@@ -1,0 +1,67 @@
+<!-- STUFF MAINLY TAKEN FROM WORKSHOP (idk if works correctly) -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBV8Ekyy35ZdCZ9xAqUYSrKQRRyzZitU9wZA&usqp=CAU">
+    <style> 
+    
+      body{
+        background-image: url("https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F43%2F2020%2F02%2FGettyImages-1056779410-2000.jpg&q=85"); */
+      /* background-image: url("https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/best-fridges-2019-1569421093.png?crop=0.730xw:0.599xh;0.134xw,0.0989xh&resize=980:*"); */
+        /* Full height */
+      height: 100%; 
+
+      /* Center and scale the image nicely */
+      background-position: scale;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    </style>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <title>Refridge-A-Finder</title>
+
+    <!-- Link stylesheets here! -->
+    <!-- The order of the link tags is the order in which styles are applied -->
+    <!-- If you want to override Bootstrap styling, link your own stylesheet AFTER bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+
+    <!-- Import Google Fonts (https://fonts.google.com/) -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+  </head>
+  <body>
+    <!-- #1 Add header here -->
+    <center><h1 style="color:white;font-size:32px;">Welcome to Refridge-A-Finder!</h1>
+
+    <!-- #2 Display some sort of image -->
+    <div id="home-buttons">
+    <!-- href attribute indicates what HTML page or external website to navigate to on click -->
+
+    <!-- #3 SEARCH BAR CODE-->
+    <center><body style = background-color:#d0d0ff;>
+    <div1>
+        <h1 style="color:white;font-size:32px;">Search For Recipe</h1>
+    </div1>
+  
+    <form action ="/search" style="width:500; margin:auto" method="GET">
+        <div class="box">
+            <input type="t" name="query" id="query" placeholder="apple,sugar,flour">
+            <!-- <a class="btn btn-info" href="search.html">View all recipes</a> -->
+        </div>
+    </form>
+    
+</body></center>
+	<!-- Place all script tags at the bottom of the body for best loading performance -->
+	<!-- Used to embed client side JavaScript -->
+  <script src="script.js"></script>
+  <!-- Import JavaScript libraries (used to connect to the backend) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>  
+
+</body>
+</html>
